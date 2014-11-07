@@ -33,6 +33,10 @@
  }
 
  #artistSelectionForm>.form-control {
- 	width: 50%;
- 	display: inline;
+ 	width: 88%;
+  	display: inline;
+ }
+
+ #artistSelectionForm {
+ 	width: 70%;
  }
