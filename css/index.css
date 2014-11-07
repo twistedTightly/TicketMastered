@@ -22,3 +22,17 @@
 .navbar-brand>img {
 	margin-top: -5px;
 }
+
+/***************************************
+ * Form Custom CSS
+ *
+ */
+
+#artistSelectionForm>label {
+ 	display: block;
+ }
+
+ #artistSelectionForm>.form-control {
+ 	width: 50%;
+ 	display: inline;
+ }
