@@ -1,0 +1,24 @@
+/***************************************
+ * Current Style Guide
+ *
+ *
+ * Main color: #1D0177
+ * Accent color:
+ *
+ * Heading font:
+ * Body font:
+ *
+ */
+
+/***************************************
+ * Navbar Custom CSS
+ *
+ */
+
+.navbar-default {
+	background-color: #1D0177;
+}
+
+.navbar-brand>img {
+	margin-top: -5px;
+}
