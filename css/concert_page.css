@@ -1,0 +1,14 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.jumbo-wrapper {
+	background-image:url('../images/m5background.jpg');
+}
+.jumbotron {
+	background: rgba(0,0,0,0.6);
+	color: white;
+}
+#logo {
+	margin-top: 40px;
+}
