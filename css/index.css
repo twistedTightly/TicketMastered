@@ -19,7 +19,7 @@
  */
 
 body {
-	background-color: black;	
+	background-color: #1F1F1F;	
 	font-family: 'Lato';
 	padding-top: 50px;
 	padding-bottom: 20px;
@@ -36,10 +36,10 @@ h1,h2,h3,h4,h5,h6 {
  */
 
 .navbar-default {
-	background-color: #003d52;
+	background-color: #A40032;
 }
 .navbar-inverse {
-	background-color: #003d52;	
+	background-color: #A40032;	
 }
 .navbar-brand>img {
 	margin-top: -5px;
@@ -52,6 +52,9 @@ h1,h2,h3,h4,h5,h6 {
 
 #artistSelectionForm>label {
  	display: block;
+ 	font-size: 300%;
+ 	padding-top: 50px;
+ 	padding-bottom: 20px;
  }
 
  #artistSelectionForm>.form-control {
