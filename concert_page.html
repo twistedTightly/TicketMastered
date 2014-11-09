@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">
@@ -31,21 +31,56 @@
     </nav>
 
     <div class="jumbo-wrapper">
-    <div class="jumbotron">
-      <div class="container">
-        <div class="col-md-2">
-          <img src="images/m5logo.jpg" alt="logo" class="img-circle" align="left" id="logo">
-        </div>
-        <div class="col-md-10">
-          <h1>Maroon 5</h1>
-          <p>Madison Square Garden, New York, NY</p>
-          <p>Thursday, March 5, 2015</p>
-          <p>7:30PM</p>
+      <div class="jumbotron">
+        <div class="container">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-2">
+            <img src="images/m5logo.jpg" alt="logo" class="img-circle" align="left" id="logo">
+          </div>
+          <div class="col-md-9">
+            <h1>Maroon 5</h1>
+            <p>Madison Square Garden, New York, NY</p>
+            <p>Thursday, March 5, 2015</p>
+            <p>7:30PM</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="col-md-4">
+      <h3>Filter seats by</h3>
+      <p>Price Range:</p>
+      <p>Quantity:</p>
+      <p>Ticket Type:</p>
+    </div>
+    <div class="col-md-8">
+      <div class="center-button">
+        <form method="link" action="checkout.html">
+          <button class="btn btn-primary btn-lg btn-lrg" type="submit">BUY TICKETS</button>
+        </form>
+      </div>
+      <div id="seatmap">
+        <img src="http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nv2/59130s.gif" alt="seatmap" class="img-rounded">
+      </div>
+      <div class="center-button">
+        <form method="link" action="explore3D.html">
+          <button class="btn btn-default btn-lg btn-lrg" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Check out their music</h3>
+      <iframe src="https://embed.spotify.com/?uri=spotify:artist:04gDigrS5kc9YWfZHwBETP" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+    <div class="col-md-4">
+      <h3>What will it be like?</h3>
+      <iframe width="320" height="240" src="http://www.youtube.com/embed/ilyPsSnP_TE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4">
+      <h3>What are people saying?</h3>
+    </div>
 
 
 

@@ -1,8 +1,10 @@
+@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=EB+Garamond');
 /***************************************
  * Current Style Guide
  *
  *
- * Main color: #1B4B6A
+ * Main color: 
  * Accent color:
  *
  * Heading font:
@@ -11,14 +13,31 @@
  */
 
 /***************************************
+ *
+ *
+ */
+
+body {
+	background-color: black;	
+	font-family: 'Lato-Light';
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'EB Garamond';
+}
+
+/***************************************
  * Navbar Custom CSS
  *
  */
 
 .navbar-default {
-	background-color: #1B4B6A;
+	background-color: #003d52;
 }
 
+.navbar-inverse {
+	background-color: #003d52;	
+}
 .navbar-brand>img {
 	margin-top: -5px;
 }

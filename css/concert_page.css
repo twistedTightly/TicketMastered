@@ -1,14 +1,22 @@
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: white;
 }
 .jumbo-wrapper {
-	background-image:url('../images/m5background.jpg');
+	background-image: url('../images/m5background.jpg');
 }
 .jumbotron {
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.75);
 	color: white;
 }
 #logo {
 	margin-top: 40px;
+}
+.center-button {
+	text-align: center;
+}
+#seatmap {
+	text-align: center;
+	margin: 20px;
 }
