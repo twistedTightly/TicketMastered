@@ -21,6 +21,9 @@
 body {
 	background-color: black;	
 	font-family: 'Lato';
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: white;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -35,7 +38,6 @@ h1,h2,h3,h4,h5,h6 {
 .navbar-default {
 	background-color: #003d52;
 }
-
 .navbar-inverse {
 	background-color: #003d52;	
 }
