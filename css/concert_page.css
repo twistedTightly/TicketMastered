@@ -1,9 +1,4 @@
-body {
-	padding-top: 50px;
-	padding-bottom: 20px;
-	color: white;
-}
-.jumbo-wrapper {
+#jumbo-wrapper {
 	background-image: url('../images/m5background.jpg');
 }
 .jumbotron {
