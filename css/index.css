@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Lato');
-@import url('http://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
 /***************************************
  * Current Style Guide
  *
@@ -23,7 +23,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'EB Garamond';
+	font-family: 'Oswald';
 }
 
 /***************************************

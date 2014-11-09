@@ -20,3 +20,13 @@ body {
 	text-align: center;
 	margin: 20px;
 }
+.table {
+	color: black;
+}
+#user-comments {
+	height: 400px;
+	overflow: auto;
+}
+.user {
+	text-align: center;
+}
