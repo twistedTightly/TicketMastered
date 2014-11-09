@@ -19,7 +19,8 @@
  */
 
 body {
-	background-color: #1F1F1F;	
+	background-image: url('../images/pattern.png');
+	background-repeat: repeat;
 	font-family: 'Lato';
 	padding-top: 50px;
 	padding-bottom: 20px;
