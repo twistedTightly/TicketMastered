@@ -50,33 +50,54 @@
 
     <div class="col-md-4">
       <h3>Filter seats by</h3>
-      <p>Price Range:</p>
-      <p>Quantity:</p>
-      <p>Ticket Type:</p>
+      <div class="filters">
+        <label>Price Range:</label><br>
+        <form oninput="priceLabel.value=price.value">
+          <output name="priceLabel" for="price">0</output>
+          <input type="range" name="price" min="0" max="350" value="0">
+        </form>
+      </div>
+      <div class="filters">
+        <label>Quantity:</label><br>
+        <form oninput="qtyLabel.value=qty.value">
+          <output name="qtyLabel" for="qty">1</output>
+          <input type="range" id="qty" name="qty" min="1" max="10" value="1">
+        </form>
+      </div>
+      <div class="filters">
+        <label>Ticket Type:</label><br>
+        <input type="checkbox" name="ticket-type" value="General"> General
+        <input type="checkbox" name="ticket-type" value="Senior"> Senior      
+        <input type="checkbox" name="ticket-type" value="VIP"> VIP
+      </div>
     </div>
     <div class="col-md-8">
-      <div class="center-button">
+      <div id="buy">
         <form method="link" action="checkout.html">
-          <button class="btn btn-primary btn-lg btn-lrg" type="submit">Buy Tickets</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Buy Tickets</button>
         </form>
       </div>
       <div id="seatmap">
-        <img src="http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nv2/59130s.gif" alt="seatmap" class="img-rounded">
+        <img src="http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nv2/59130s.gif" alt="seatmap">
       </div>
-      <div class="center-button">
+      <div id="explore3D">
         <form method="link" action="explore3D.html">
-          <button class="btn btn-default btn-lg btn-lrg" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
+          <button class="btn btn-default btn-block" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
         </form>
       </div>
     </div>
 
     <div class="col-md-4">
       <h3>Check out their music</h3>
-      <iframe src="https://embed.spotify.com/?uri=spotify:artist:04gDigrS5kc9YWfZHwBETP" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <div id="music">
+        <iframe src="https://embed.spotify.com/?uri=spotify:artist:04gDigrS5kc9YWfZHwBETP" height="380" frameborder="0" allowtransparency="true"></iframe>
+      </div>
     </div>
     <div class="col-md-4">
       <h3>What will it be like?</h3>
-      <iframe width="320" height="240" src="http://www.youtube.com/embed/ilyPsSnP_TE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <div id="trailer">
+        <iframe height="230" src="http://www.youtube.com/embed/ilyPsSnP_TE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div class="col-md-4">
       <h3>What are people saying?</h3>
