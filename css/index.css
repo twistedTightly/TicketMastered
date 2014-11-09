@@ -1,5 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=Lato:300');
 @import url('http://fonts.googleapis.com/css?family=Oswald');
+
 /***************************************
  * Current Style Guide
  *
@@ -7,8 +8,8 @@
  * Main color: 
  * Accent color:
  *
- * Heading font:
- * Body font:
+ * Heading font: Oswald
+ * Body font: Lato Light 300
  *
  */
 
@@ -19,7 +20,7 @@
 
 body {
 	background-color: black;	
-	font-family: 'Lato-Light';
+	font-family: 'Lato';
 }
 
 h1,h2,h3,h4,h5,h6 {
