@@ -3,6 +3,7 @@ body {
 	padding-bottom: 20px;
 	color: white;
 }
+
 .table {
 	border: 1;
 	color: black;
@@ -10,11 +11,20 @@ body {
     margin-right: auto;
 	width: 85%;
 	text-align: center;
-
+	table-layout: auto;
 }
+
+th, td{
+	padding: 15px;
+}
+
 #query {
 	text-align: center;
 	margin-left: auto;
     margin-right: auto;
     width: 85%;
+}
+
+#resultText {
+
 }
