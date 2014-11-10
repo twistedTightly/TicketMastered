@@ -31,14 +31,9 @@ input[type='checkbox'] {
 iframe {
 	width: 100%;
 }
-#music {
-	background: rgba(255,255,255,0.1);
-}
-.table {
-	color: black;
-}
 #user-comments {
 	height: 400px;
+	color: black;
 	overflow: auto;
 }
 .user {
