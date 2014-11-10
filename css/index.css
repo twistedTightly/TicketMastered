@@ -166,11 +166,11 @@ h1,h2,h3,h4,h5,h6 {
 	background: white;
 	padding: 20px 20px 80px 80px;
 	text-align: right;
-	border: 3px #EEE;
+	border: 3px #1A1A1A;
 }
 
 #datepicker td>a.ui-state-hover {
-	background: #DDD;
+	background: #1A1A1A;
 	text-decoration: none;
 }
 
