@@ -14,7 +14,7 @@
  */
 
 /***************************************
- *
+ * General Styling
  *
  */
 
@@ -31,6 +31,18 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Oswald';
 }
 
+.sectionHeader {
+	font-size: 300%;
+}
+
+.selectionForm {
+ 	width: 70%;
+ }
+
+ .selectionForm>div {
+ 	padding-left: 0;
+ }
+
 /***************************************
  * Navbar Custom CSS
  *
@@ -40,7 +52,9 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: #A40032;
 }
 .navbar-inverse {
-	background-color: #A40032;	
+	background-color: #A40032;
+	border: none;
+	box-shadow: 0 0 0.5em black;
 }
 .navbar-brand>img {
 	margin-top: -5px;
@@ -51,28 +65,8 @@ h1,h2,h3,h4,h5,h6 {
  *
  */
 
-#artistSelectionForm>label {
- 	display: block;
- 	font-size: 300%;
- 	padding-top: 50px;
- 	padding-bottom: 20px;
- }
-
- #artistSelectionForm>.form-control {
- 	width: 88%;
-  	display: inline;
- }
-
- #artistSelectionForm {
- 	width: 70%;
- }
-
  #artistSelection {
  	padding-bottom: 30px;
- }
-
- #artistSelectionForm>div {
- 	padding-left: 0;
  }
 
  .artistSuggestionBubbles {
@@ -80,13 +74,36 @@ h1,h2,h3,h4,h5,h6 {
  	margin: 0 140px;
  }
 
+#artistSelectionForm>label {
+ 	display: block;
+  	padding-top: 50px;
+ 	padding-bottom: 20px;
+ }
+
+.col-sm-12 .form-control {
+ 	width: 88%;
+  	display: inline;
+ }
+
+
  /***************************************
  * Location Selection CSS
  *
  */
 
-#location-selection {
+#locationSelection {
 	margin: 70px 0;
+}
+
+#locationSearch {
+	position: absolute;
+	top: 860px;
+	left: 25%;
+	z-index: 1000;
+	background-color: #A40032;
+	padding: 10px 20px;
+	border-radius: 6px;
+	box-shadow: 1px 1px 0.7em black;
 }
 
  #map-canvas {
@@ -95,3 +112,13 @@ h1,h2,h3,h4,h5,h6 {
  	margin: 0;
  	padding: 0;
  }
+
+/***************************************
+ * Date Selection CSS
+ *
+ */
+
+#dateSelectionForm>label {
+	display: block;
+	padding-bottom: 30px;
+}
