@@ -32,13 +32,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn {
-	background-color: #FA7D0A;
-	border-color: #E17009;
+	background-color: #ffaa33;
+	border-color: #ffa21f;
+	color: white;
 }
 
 .btn:hover {
-	background-color: #C86408;
-	border-color: #AF5707;
+	background-color: #ff9a0c;
+	border-color: #f79000;
+	color: white;
 }
 
 .sectionHeader {
