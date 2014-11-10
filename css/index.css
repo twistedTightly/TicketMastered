@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6 {
  	width: 70%;
  }
 
- .selectionForm>div {
+.noLeftPadding {
  	padding-left: 0;
  }
 
@@ -92,7 +92,7 @@ h1,h2,h3,h4,h5,h6 {
  */
 
 #locationSelection {
-	margin: 70px 0;
+	margin: 50px 0;
 }
 
 #locationSearch {
@@ -121,4 +121,51 @@ h1,h2,h3,h4,h5,h6 {
 #dateSelectionForm>label {
 	display: block;
 	padding-bottom: 30px;
+}
+
+#calendarRow {
+	width: 70%;
+	margin: auto;
+}
+
+/* Making calendar fill exactly 70% of the screen */
+#calendarRow>.col-lg-12 {
+	padding: 0;
+}
+
+.ui-datepicker-calendar {
+	margin: auto;
+}
+
+.ui-datepicker-header {
+	text-align: center;
+	padding: 50px 0 20px 0;
+}
+
+.ui-datepicker-prev {
+	margin-right: 100px;
+}
+.ui-datepicker-next {
+	margin-left: 20px;
+}
+
+#datepicker td>a {
+	display: block;
+	background: white;
+	padding: 20px 20px 80px 80px;
+	text-align: right;
+	border: 3px #EEE;
+}
+
+#datepicker td>a.ui-state-hover {
+	background: #DDD;
+	text-decoration: none;
+}
+
+td.ui-datepicker-unselectable {
+	background: #EFEFEF;
+}
+
+.ui-datepicker-title {
+	font-size: 200%;
 }
