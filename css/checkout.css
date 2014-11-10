@@ -1,0 +1,22 @@
+#progress-bar {
+	background-color: #1a1a1a;
+	font-size: 18px;	
+}
+#summary {
+	color: black;
+	background-color: white;
+}
+tr#total {
+	color: white;
+	background-color: rgb(250,125,10);
+	font-weight: bold;
+}
+#cards {
+	padding-top: 28px;
+}
+#expires{
+	display: block;
+}
+#expmonth, #expyear {
+	padding-left: 0px;
+}

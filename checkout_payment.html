@@ -30,21 +30,103 @@
     </nav>
 
     <ol class="breadcrumb" id="progress-bar">
-      <li class="active">1. Shipping <span class="glyphicon glyphicon-chevron-right"></span></li>
-      <li>2. Payment <span class="glyphicon glyphicon-chevron-right"></span></li>
+      <li>1. Shipping <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      <li class="active">2. Payment <span class="glyphicon glyphicon-chevron-right"></span></li>
       <li>3. Review & Place Order <span class="glyphicon glyphicon-chevron-right"></span></li>
     </ol>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-8">
-          <h3>Enter Shipping Address</h3>
-          <form method="link" action="checkout_payment.html">
+          <h3>Enter Payment Information</h3>
+          <form method="link" action="checkout_review.html">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cardtype">Credit/Debit Card Type:</label>
+                  <select class="form-control" id="cardtype" autofocus>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="AMEX">American Express</option>
+                    <option value="VISA">VISA</option>
+                    <option value="MC">MasterCard</option>
+                    <option value="DIS">Discover Network</option>
+                    <option value="DC">Diners Club</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6" id="cards">
+                <img src="images/amex.png" alt="AMEX">
+                <img src="images/visa.png" alt="VISA">
+                <img src="images/mc.png" alt="MC">
+                <img src="images/discover.png" alt="DIS">
+                <img src="images/diners.png" alt="DC">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cardnum">Card Number:</label>
+                  <input type="text" class="form-control" id="cardnum">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="security">Security Code:</label>
+                  <input type="text" class="form-control" id="security">
+                </div>
+              </div>  
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label id="expires">Expires On:</label>
+                  <div class="col-md-6" id="expmonth">
+                    <select class="form-control" id="expmonth">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6" id="expyear">
+                    <select class="form-control" id="expyear">
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                    </select>
+                  </div>
+                </div>
+              </div>             
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nameoncard">Name on Card:</label>
+                  <input type="text" class="form-control" id="nameoncard">
+                </div>
+              </div>
+            </div>
+            
+            <h3>Billing Address</h3>
+            <div class="form-group">
+              <div class="checkbox">
+                <label><input type="checkbox" value="same" checked>Same as Shipping</label>
+              </div>
+            </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="firstname">First Name:</label>
-                  <input type="text" class="form-control" id="firstname" autofocus>
+                  <input type="text" class="form-control" id="firstname">
                 </div>
               </div>
               <div class="col-md-6">
