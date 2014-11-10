@@ -2,13 +2,19 @@
 	background-color: #1a1a1a;
 	font-size: 18px;	
 }
+.breadcrumb>.active {
+	color: white;
+}
+.breadcrumb>li {
+	color: #777;
+}
 #summary {
 	color: black;
 	background-color: white;
 }
 tr#total {
 	color: white;
-	background-color: rgb(250,125,10);
+	background-color: #FA7D0A;
 	font-weight: bold;
 }
 #cards {
@@ -20,3 +26,5 @@ tr#total {
 #expmonth, #expyear {
 	padding-left: 0px;
 }
+
+
