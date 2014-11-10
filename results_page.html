@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TicketMaster</title>
+    <title>Search Results</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/results_page.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,32 +24,42 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">
-            <img alt="Brand" src="http://s1.ticketm.net/tm/en-us/img/sys/resale/tm-site-logo.png">
+            <img alt="Ticketmaster logo" src="http://s1.ticketm.net/tm/en-us/img/sys/resale/tm-site-logo.png">
           </a>
         </div>
       </div>
-<!--       <div class="container" id="query">
-        <div class="navbar-header">
-          <label> Maroon 5 in New York on __________</label>
-        </div>
-      </div> -->
+    </nav> 
 
-    </nav>  
-    <div id="results-header" location="fixed" background=rgba(255,255,255,0.8)>
-      <!-- Query Description Header -->
-      <div class="container-fluid">
-        <div id="query" class="row">
-          <h1 align="center"> <b><u>Maroon 5</u></b> in <b><u>New York</u></b> on <b>__________</b></h1>
+
+    <!-- Query Description Header -->
+    <div class="container-fluid" id="results-header">
+      <div id="query" class="row">
+        <div class="col-xs-4">
+          <input value="Maroon 5">
+        </div>
+        <div class="col-xs-1">
+          <span>in</span>
+        </div>
+        <div class="col-xs-3">
+          <input value="New York">
+        </div>
+        <div class="col-xs-1">
+          <span>on</span>
+        </div>
+        <div class="col-xs-3">
+          <input value="">
         </div>
       </div>
 
-      <!-- Results Display Type Selection -->
-      <a href="results_page.html" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-list"></span>List</a>
-      <a href="results_page.html" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-calendar"></span>Calendar</a>
-      <a href="results_page.html" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-map-marker"></span>Map</a>
+      <!-- Results Display Type Options -->
+      <div class="row" id="searchDisplayOptions">
+        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-list"></span> List</a>
+        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-calendar"></span> Calendar</a>
+        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-map-marker"></span> Map</a>
+      </div>
     </div>
 
-    <table align="center">
+    <table>
       <tr>
         <td><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td>
         <td><h3>Z100's Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td> 
@@ -68,7 +79,11 @@
         <td>7:30p March 6, 2015</td>
       </tr>   -->  
     </table>
+
     <div id="escapeSearch" align="center">
-      <label for="startOver"> Didn't find what you want?</label> <a id="startOver" href="index.html" class="btn btn-primary btn-default">Start Over</a>
+      <label for="startOver"> Didn't find what you want?</label>
+      <a id="startOver" href="index.html" class="btn btn-primary btn-default">Start Over</a>
+    </div>
+
   </body>
 </html>
