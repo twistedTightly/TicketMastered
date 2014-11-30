@@ -55,12 +55,11 @@ h1,h2,h3,h4,h5,h6 {
  	padding-left: 0;
  }
 
- .darken {
- 	border-radius: 100%;
- 	background: black;
- 	padding: 0;
- 	display: inline-block;
- }
+ #skipToResults {
+ 	position: absolute;
+ 	right: 0;
+ 	display: none;
+}
 
 /***************************************
  * Navbar Custom CSS
@@ -85,25 +84,27 @@ h1,h2,h3,h4,h5,h6 {
  */
 
  #artistSelection {
- 	padding-bottom: 30%;
+  	padding-top: 10%;
+  	position: relative;
  }
 
 #artistSelectionForm>label {
  	display: block;
-  	padding-top: 20%;
  	padding-bottom: 3%;
  }
 
 .col-sm-12 .form-control {
- 	width: 88%;
+ 	width: 100%;
   	display: inline;
 }
 
-#artistSelection #skipToResults {
- 	position: absolute;
- 	right: 0;
- 	bottom: 2%;
- 	display: none;
+.skipButtonCol {
+	position: static;
+}
+
+#artistSelectionSection #skipToResults {
+ 	bottom: 0;
+ 	margin-bottom: 15px;
 }
 
 #artistSelectionSection .next.affix {
@@ -115,6 +116,18 @@ h1,h2,h3,h4,h5,h6 {
 
 #artistSelectionSection .next.affix-bottom {
  	position: relative;
+}
+
+/* Arist Info Section */
+#artistInfo {
+	width: 400px;
+	height: 300px;
+	margin-top: 6%;
+}
+
+#artistInfo h1 {
+	display: inline;
+	padding-left: 30px;
 }
 
 /* For typeahead HTML */
@@ -163,12 +176,17 @@ h1,h2,h3,h4,h5,h6 {
  */
 
 #locationSelection {
-	margin: 50px 0;
+	margin: 30px 0;
+	padding: 0;
+}
+
+#locationSelectionForm div {
+	padding: 0;
 }
 
 #locationSearch {
 	position: absolute;
-	top: 860px;
+	top: 810px;
 	left: 25%;
 	z-index: 1000;
 	background-color: #A40032;
@@ -184,8 +202,23 @@ h1,h2,h3,h4,h5,h6 {
  	padding: 0;
 }
 
-#locationSelection form button {
+#locationSelection form {
 	z-index: 1000;
+}
+
+#locationSkipToResultsCol {
+	position: relative;
+}
+
+#locationSelection #skipToResults {
+	top: 120px;
+	z-index: 1000;
+	box-shadow: 1px 1px 0.7em black;
+}
+
+/* Skip location/continue button placement */
+#locationSelection button.next.affix-top {
+	position: relative;
 }
 
 #locationSelection button.next.affix {
@@ -195,7 +228,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin-left: -72px; /* Half the width of the button itself */
 }
 
-#artistSelectionSection button.next.affix-bottom {
+#artistSelection button.next.affix-bottom {
  	position: relative;
 }
 

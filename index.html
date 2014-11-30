@@ -38,21 +38,33 @@
     <div id="artistSelectionSection" class="container-fluid">
 
       <div id="artistSelection" class="row">
-        <div class="col-md-12">
-          <form role="form" method="link" action="results_page.html">
-            <div class="form-group form-group-lg center-block selectionForm" id="artistSelectionForm">
-              <label for="artistNameInput" class="sectionHeader">I want to see...</label>
-              <div class="col-sm-12 noLeftPadding" id="the-basics">
-                <input type="text" class="typeahead form-control col-sm-12" id="artistNameInput" placeholder="Search by artist">
-              </div>
-            </div>
+        <form role="form" method="link" action="results_page.html">
+          <div class="col-sm-1"></div>
+
+          <div class="col-sm-10">
+              <!-- Search box -->
+              <div class="form-group form-group-lg center-block selectionForm" id="artistSelectionForm">
+                <label for="artistNameInput" class="sectionHeader">I want to see...</label>
+                <div class="noLeftPadding" id="the-basics">
+                  <input type="text" class="typeahead form-control" id="artistNameInput" placeholder="Search by artist">
+                </div>
+              </div><!-- End search box -->
+          </div>
+
+          <div class="col-sm-1 skipButtonCol">
             <button type="submit" class="btn btn-default btn-lg" id="skipToResults">
               Skip to results
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             </button>
-          </form>
-        </div>
-      </div>
+          </div>
+        </form>
+      </div><!-- End row -->
+
+      <!-- Artist Info -->
+      <div class="center-block" id="artistInfo"></div>
+      <!-- End artist info -->
+
+      <div id="locationScrollTo"></div>
 
       <form role="form" method="link" action="#locationScrollTo">
         <button type="submit" class="next center-block btn btn-default btn-lg">
@@ -63,27 +75,29 @@
 
     </div> <!-- end Artist Selection Section -->
 
-    <div id="locationScrollTo"></div>
-
     <!-- Location Selection Section -->
-    <div id="locationSelection">
-
-      <!-- Location Search Box -->
-      <div id="locationSearch" class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <form role="form" method="link" action="#dateScrollTo">
-              <div class="form-group form-group-lg center-block" id="locationSelectionForm">
-                <label for="locationInput" class="sectionHeader">Choose a location</label>
-                <div class="col-sm-10 noLeftPadding">
-                  <input type="text" class="form-control col-sm-10" id="locationInput" placeholder="City, state, or venue">
+    <div id="locationSelection" class="container-fluid">
+      <form role="form" method="link" action="results_page.html">
+        <!-- Location Search Box -->
+        <div id="locationSearch" class="row">
+            <div class="col-md-12">
+                <div class="form-group form-group-lg center-block" id="locationSelectionForm">
+                  <label for="locationInput" class="sectionHeader">Choose a location</label>
+                  <div class="col-sm-12 noLeftPadding">
+                    <input type="text" class="form-control col-sm-12" id="locationInput" placeholder="City, state, or venue">
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-default btn-lg col-sm-2">Continue</button>
-              </div>
-            </form>
-          </div>
+            </div>
+        </div> <!-- end Location Search Box -->
+
+        <div id="locationSkipToResultsCol">
+          <button type="submit" class="btn btn-default btn-lg" id="skipToResults">
+            Skip to results
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          </button>
         </div>
-      </div> <!-- end Location Search Box -->
+      </form>
+
       <div id="map-canvas"></div>
 
       <form role="form" method="link" action="#dateScrollTo">
@@ -92,7 +106,6 @@
           <div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>
         </button>
       </form>
-
     </div>  <!-- end Location Selection Section -->
 
     <div id="dateScrollTo" style="position: absolute; top: 1450px;"></div>
@@ -105,9 +118,11 @@
           <form role="form" method="link" action="results_page.html">
             <div class="form-group form-group-lg center-block selectionForm" id="dateSelectionForm">
               <label for="dateInput" class="sectionHeader">I want to go...</label>
-              <button type="submit" class="btn btn-default btn-lg col-sm-5">Whenever</button>
-              <div class="col-sm-2"></div>
-              <button type="submit" class="btn btn-default btn-lg col-sm-5">As Soon As Possible</button>
+              <button type="submit" class="btn btn-default btn-lg col-sm-3">As Soon As Possible</button>
+              <div class="col-sm-1"></div>
+              <button type="submit" class="btn btn-default btn-lg col-sm-4">Within the next six months</button>
+              <div class="col-sm-1"></div>
+              <button type="submit" class="btn btn-default btn-lg col-sm-3">Skip to results</button>
             </div>
           </form>
         </div>
