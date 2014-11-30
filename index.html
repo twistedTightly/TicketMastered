@@ -46,10 +46,20 @@
                 <input type="text" class="typeahead form-control col-sm-12" id="artistNameInput" placeholder="Search by artist">
               </div>
             </div>
-            <button type="submit" class="btn btn-default btn-lg" id="skipToResults">Skip to results</button>
+            <button type="submit" class="btn btn-default btn-lg" id="skipToResults">
+              Skip to results
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
+
+      <form role="form" method="link" action="#locationScrollTo">
+        <button type="submit" class="next center-block btn btn-default btn-lg">
+          Skip to location
+          <div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>
+        </button>
+      </form>
 
     </div> <!-- end Artist Selection Section -->
 
@@ -75,6 +85,14 @@
         </div>
       </div> <!-- end Location Search Box -->
       <div id="map-canvas"></div>
+
+      <form role="form" method="link" action="#dateScrollTo">
+        <button type="submit" class="next center-block btn btn-default btn-lg">
+          Skip to date
+          <div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>
+        </button>
+      </form>
+
     </div>  <!-- end Location Selection Section -->
 
     <div id="dateScrollTo" style="position: absolute; top: 1450px;"></div>

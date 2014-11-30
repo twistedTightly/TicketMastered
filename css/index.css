@@ -97,14 +97,25 @@ h1,h2,h3,h4,h5,h6 {
 .col-sm-12 .form-control {
  	width: 88%;
   	display: inline;
- }
+}
 
- #artistSelection #skipToResults {
+#artistSelection #skipToResults {
  	position: absolute;
  	right: 0;
  	bottom: 2%;
  	display: none;
- }
+}
+
+#artistSelectionSection .next.affix {
+ 	position: fixed;
+ 	bottom: 0;
+	left: 50%;
+	margin-left: -86px; /* Half the width of the button itself */
+}
+
+#artistSelectionSection .next.affix-bottom {
+ 	position: relative;
+}
 
 /* For typeahead HTML */
 .twitter-typeahead {
@@ -171,7 +182,22 @@ h1,h2,h3,h4,h5,h6 {
  	height: 700px;
  	margin: 0;
  	padding: 0;
- }
+}
+
+#locationSelection form button {
+	z-index: 1000;
+}
+
+#locationSelection button.next.affix {
+ 	position: fixed;
+ 	bottom: 0;
+	left: 50%;
+	margin-left: -72px; /* Half the width of the button itself */
+}
+
+#artistSelectionSection button.next.affix-bottom {
+ 	position: relative;
+}
 
 /***************************************
  * Date Selection CSS

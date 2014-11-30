@@ -52,5 +52,28 @@ $('#the-basics .typeahead').typeahead({
  	// is dynamically displayed below the search bar.
  	$('.tt-dataset-artists').click(function() {
  		$('#skipToResults').css('display', 'block');
+ 		$('#artistSelectionSection .next').html('Continue' + '<div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>');
+ 		// Adjust the button's positioning, which is dependent on its width
+ 		/*var leftMargin = $('#artistSelectionSection .next').outerWidth() / 2 * -1;
+ 		$('#artistSelectionSection .next').css('margin-left', leftMargin + 'px');*/
  	});
+
+ 	// Arist skip button
+ 	$('#artistSelectionSection .next').affix({
+ 		// The extra 50 at the end corresponds to the top margin of the locationSelection div
+		offset: {
+			bottom: $(document).height() - $('#artistSelectionSection').outerHeight()
+				- $('#artistSelectionSection .next').outerHeight() - 50
+		}
+
+	});
+
+	// Location skip button
+ 	$('#locationSelection .next').affix({
+		offset: {
+			bottom: $(document).height() - $('#artistSelectionSection').outerHeight()
+				- $('#locationSelection').outerHeight() - $('#locationSelection .next').outerHeight() - 50
+		}
+	});
+
  });
