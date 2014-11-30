@@ -262,22 +262,39 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .ui-datepicker-prev {
-	margin-right: 100px;
+	position: absolute;
+	left: 150px;
 }
 .ui-datepicker-next {
-	margin-left: 20px;
+	position: absolute;
+	right: 150px;
+}
+.ui-corner-all .glyphicon {
+	font-size: 200%;
+	margin-top: 8px;
 }
 
 #datepicker td>a {
+	color: black;
 	display: block;
 	background: white;
 	padding: 20px 20px 80px 80px;
 	text-align: right;
-	border: 3px #1A1A1A;
+	border: 3px #ffaa33;
+}
+
+#datepicker td.ui-state-highlight>a {
+	background: #ffaa33;
+	text-decoration: none;
 }
 
 #datepicker td>a.ui-state-hover {
-	background: #1A1A1A;
+	background: #FFBE63;
+	text-decoration: none;
+}
+
+#datepicker td.ui-state-highlight>a.ui-state-hover {
+	background: #ffaa33; /*Darker color if desired: #FA9E1E;*/
 	text-decoration: none;
 }
 
