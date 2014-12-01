@@ -8,27 +8,61 @@
 #logo {
 	margin-top: 40px;
 }
-.filters {
-	padding-top: 30px;
+#min, #max, #qty{
+	width: 30%;
+	padding-top: 5px;
+}
+#min {
+	padding-right: 5px;
+}
+#max {
+	padding-left: 5px;
 }
 input[type='checkbox'] {
-	margin-left: 30px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
 }
-#buy {    
-	margin-left: auto;
-    margin-right: auto;
-	width: 85%;
+#ticket-table{
+	height: 200px;
+	overflow: auto;
+}
+#tickets {
+	background-color: rgb(238,238,238);
+	color: black;
+	border: solid;
+	border-color: rgb(204,204,204);
+	border-width: 1px;
 }
 #explore3D {
 	margin-left: auto;
-    margin-right: auto;
-    width: 85%;
+	margin-right: 25px;
+    width: 30%;
 }
 #seatmap {
 	text-align: center;
 	margin: 20px;
 }
-iframe {
+#preconcert {
+	padding-top: 80px;
+}
+#preconcert > .col-md-3 > h3 {
+	text-align: center;
+	padding-bottom: 15px;
+}
+#preconcert > .col-md-4 > h3 {
+	text-align: center;
+	padding-bottom: 15px;
+}
+#preconcert > .col-md-5 > h3 {
+	text-align: center;
+	padding-bottom: 15px;
+}
+#music > iframe {
+	width: 100%;
+	margin-left: -5px;
+}
+#trailer > iframe {
 	width: 100%;
 }
 #user-comments {

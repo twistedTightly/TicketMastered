@@ -54,57 +54,123 @@
       <div class="row">
         <div class="col-md-4">
           <h3>Filter seats by</h3>
-          <div class="filters">
-            <label>Price Range:</label><br>
-            <form oninput="priceLabel.value=price.value">
-              <output name="priceLabel" for="price">0</output>
-              <input type="range" name="price" min="0" max="350" value="0">
+            <form class="form-inline" role="form">
+              <div class="form-group">
+              <label>Price Range:</label><br>
+                <div class="input-group" id="min">
+                  <div class="input-group-addon">$</div><input type="number" class="form-control" min="0" placeholder="min">
+                </div>
+                to
+                <div class="input-group" id="max">
+                  <div class="input-group-addon">$</div><input type="number" class="form-control" min="0" placeholder="max">
+                </div>
+              </div>
             </form>
-          </div>
-          <div class="filters">
-            <label>Quantity:</label><br>
-            <form oninput="qtyLabel.value=qty.value">
-              <output name="qtyLabel" for="qty">1</output>
-              <input type="range" id="qty" name="qty" min="1" max="10" value="1">
-            </form>
-          </div>
-          <div class="filters">
-            <label>Ticket Type:</label><br>
-            <input type="checkbox" name="ticket-type" value="General"> General
-            <input type="checkbox" name="ticket-type" value="Senior"> Senior      
-            <input type="checkbox" name="ticket-type" value="VIP"> VIP
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Quantity:</label><br>
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group">
+                  <label>Ticket Type:</label><br>
+                    <input type="checkbox" class="ticket-type" value="General" checked> General
+                    <input type="checkbox" class="ticket-type" value="Senior"> Senior      
+                    <input type="checkbox" class="ticket-type" value="VIP"> VIP
+                </div>
+              </div>
+            </div>
+            <h3>Available Tickets</h3>
+            <div id="ticket-table">
+            <table class="table table-hover" id="tickets">
+              <tr>
+                <td>Section G</td>
+                <td>Row 25</td>
+                <td>Seat 7</td>
+                <td>Qty 1</td>
+                <td>$100.97</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section E</td>
+                <td>Row 59</td>
+                <td>Seat 6</td>
+                <td>Qty 1</td>
+                <td>$150.10</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section D</td>
+                <td>Row 12</td>
+                <td>Seat 10</td>
+                <td>Qty 1</td>
+                <td>$210.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section C</td>
+                <td>Row 15</td>
+                <td>Seat 4</td>
+                <td>Qty 1</td>
+                <td>$250.89</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section B</td>
+                <td>Row 10</td>
+                <td>Seat 14</td>
+                <td>Qty 1</td>
+                <td>$300.70</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section A</td>
+                <td>Row 1</td>
+                <td>Seat 1</td>
+                <td>Qty 1</td>
+                <td>$900.10</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+            </table>
           </div>
         </div>
         <div class="col-md-8">
-          <div id="buy">
-            <form method="link" action="checkout.html">
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Buy Tickets</button>
-            </form>
-          </div>
           <div id="seatmap">
             <img src="http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nv2/59130s.gif" alt="seatmap">
           </div>
           <div id="explore3D">
             <form method="link" action="explore3D.html">
-              <button class="btn btn-default btn-block" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
+              <button class="btn btn-default btn-md" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
             </form>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-4">
+      <div class="row" id="preconcert">
+        <div class="col-md-3">
           <h3>Check out their music</h3>
           <div id="music">
             <iframe src="https://embed.spotify.com/?uri=spotify:artist:04gDigrS5kc9YWfZHwBETP" height="380" frameborder="0" allowtransparency="true"></iframe>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <h3>What will it be like?</h3>
           <div id="trailer">
-            <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/ilyPsSnP_TE?rel=0&amp;showinfo=0"></iframe>
-            </div>
+            <iframe width="383" height="300" src="https://www.youtube.com/embed/C0PqR03HjW4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
         <div class="col-md-4">
