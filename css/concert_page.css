@@ -24,7 +24,7 @@ input[type='checkbox'] {
 	margin-right: 10px;
 }
 #ticket-table{
-	height: 200px;
+	height: 390px;
 	overflow: auto;
 }
 #tickets {
@@ -38,13 +38,23 @@ input[type='checkbox'] {
 	margin-left: auto;
 	margin-right: 25px;
     width: 30%;
+    margin-top: -15px;
 }
 #seatmap {
 	text-align: center;
 	margin: 20px;
+	padding-top: 10px;
+}
+#separator {
+	padding-bottom: 175px;
 }
 #preconcert {
-	padding-top: 80px;
+	border: ridge;
+	border-width: 3px;
+	border-radius: 50px;
+	padding-bottom: 30px;
+	background-color: #1a1a1a;
+	margin-bottom: -50px;
 }
 #preconcert > .col-md-3 > h3 {
 	text-align: center;

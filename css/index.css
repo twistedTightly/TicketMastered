@@ -31,16 +31,20 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Oswald';
 }
 
+.form-control {
+	background-color: rgb(238,238,238);
+}
+
 .btn {
-	background-color: #ffaa33;
-	border-color: #ffa21f;
-	color: white;
+	color: #1a1a1a;
+	background-color: #FDBA51;
+	border-color: #fdb038;
 }
 
 .btn:hover {
-	background-color: #ff9a0c;
-	border-color: #f79000;
-	color: white;
+	color: #1a1a1a;
+	background-color: #fca61f;
+	border-color: #fc9c05;
 }
 
 .sectionHeader {

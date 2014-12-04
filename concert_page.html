@@ -54,7 +54,7 @@
       <div class="row">
         <div class="col-md-4">
           <h3>Filter seats by</h3>
-            <form class="form-inline" role="form">
+            <form class="form-inline" role="form" onclick="noFilter()">
               <div class="form-group">
               <label>Price Range:</label><br>
                 <div class="input-group" id="min">
@@ -71,7 +71,7 @@
               <div class="col-md-3">
                 <div class="form-group">
                   <label>Quantity:</label><br>
-                  <select class="form-control">
+                  <select class="form-control" onclick="noFilter()">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -88,9 +88,9 @@
               <div class="col-md-9">
                 <div class="form-group">
                   <label>Ticket Type:</label><br>
-                    <input type="checkbox" class="ticket-type" value="General" checked> General
-                    <input type="checkbox" class="ticket-type" value="Senior"> Senior      
-                    <input type="checkbox" class="ticket-type" value="VIP"> VIP
+                    <input type="checkbox" class="ticket-type" value="General" checked onclick="noFilter()"> General
+                    <input type="checkbox" class="ticket-type" value="Senior" onclick="noFilter()"> Senior      
+                    <input type="checkbox" class="ticket-type" value="VIP" onclick="noFilter()"> VIP
                 </div>
               </div>
             </div>
@@ -114,11 +114,59 @@
                 <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
               </tr>
               <tr>
+                <td>Section E</td>
+                <td>Row 2</td>
+                <td>Seat 7</td>
+                <td>Qty 1</td>
+                <td>$155.10</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section D</td>
+                <td>Row 12</td>
+                <td>Seat 5</td>
+                <td>Qty 1</td>
+                <td>$161.12</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section D</td>
+                <td>Row 5</td>
+                <td>Seat 3</td>
+                <td>Qty 1</td>
+                <td>$175.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
                 <td>Section D</td>
                 <td>Row 12</td>
                 <td>Seat 10</td>
                 <td>Qty 1</td>
                 <td>$210.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section D</td>
+                <td>Row 15</td>
+                <td>Seat 1</td>
+                <td>Qty 1</td>
+                <td>$210.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section D</td>
+                <td>Row 15</td>
+                <td>Seat 12</td>
+                <td>Qty 1</td>
+                <td>$210.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section C</td>
+                <td>Row 5</td>
+                <td>Seat 115</td>
+                <td>Qty 1</td>
+                <td>$240.00</td>
                 <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
               </tr>
               <tr>
@@ -138,11 +186,35 @@
                 <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
               </tr>
               <tr>
+                <td>Section B</td>
+                <td>Row 10</td>
+                <td>Seat 4</td>
+                <td>Qty 1</td>
+                <td>$350.70</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section B</td>
+                <td>Row 1</td>
+                <td>Seat 12</td>
+                <td>Qty 1</td>
+                <td>$375.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
+                <td>Section B</td>
+                <td>Row 5</td>
+                <td>Seat 1</td>
+                <td>Qty 1</td>
+                <td>$375.00</td>
+                <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
+              </tr>
+              <tr>
                 <td>Section A</td>
                 <td>Row 1</td>
                 <td>Seat 1</td>
                 <td>Qty 1</td>
-                <td>$900.10</td>
+                <td>$998.10</td>
                 <td><form method="link" action="checkout.html"><button class="btn btn-primary btn-sm" type="submit">Buy</button></form></td>
               </tr>
             </table>
@@ -150,14 +222,16 @@
         </div>
         <div class="col-md-8">
           <div id="seatmap">
-            <img src="http://s1.ticketm.net/tm/en-us/tmimages/venue/maps/nv2/59130s.gif" alt="seatmap">
+            <img src="images/seatmap.gif" alt="seatmap" onclick="noSeat()">
           </div>
           <div id="explore3D">
-            <form method="link" action="explore3D.html">
-              <button class="btn btn-default btn-md" type="submit">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
-            </form>
+            <button class="btn btn-default btn-md" type="submit" onclick="notImplemented()">Explore this venue in 3D <span class="glyphicon glyphicon-play"></span></button>
           </div>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" id="separator"></div>
       </div>
 
       <div class="row" id="preconcert">
@@ -184,6 +258,18 @@
         </div> 
       </div>
     </div>
+
+    <script>
+    function notImplemented() {
+      alert("This feature is not yet implemented.");
+    }
+    function noFilter() {
+      alert("Filtering functionality is not yet implemented.")
+    }
+    function noSeat() {
+      alert("Seat selection by seat map is not yet implemented.\nPlease choose from the available tickets in the table to the left.")
+    }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
