@@ -35,7 +35,7 @@ var artists = ['Maroon 5', 'Macklemore', 'Mariah Carey', 'Mat Kearney',
 'Miley Cyrus', 'Marvin Gaye'
 ];
 
-$('#the-basics .typeahead').typeahead({
+$('#artistSearch .typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 1
@@ -51,20 +51,26 @@ $('#the-basics .typeahead').typeahead({
 var artistSelected = function() {
 	$('#artistSelectionSection #skipToResults').css('display', 'block');
 	$('#artistSelectionSection .next').html('Continue ' + '<div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>');
-	// Adjust the button's positioning, which is dependent on its width
-	/*var leftMargin = $('#artistSelectionSection .next').outerWidth() / 2 * -1;
-	$('#artistSelectionSection .next').css('margin-left', leftMargin + 'px');*/
 
 	// Add the artist info section
 	$('#artistInfo').append('<img alt="Maroon 5" src="images/homepage/maroon5-circle_200x200.png"><h1>Maroon 5</h1>');
  };
 
- var locationSelected = function() {
- 	$('#locationSelection #skipToResults').css('display', 'block');
-	$('#locationSelection .next').html('Continue ' + '<div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>');
-
-	// TODO: Drop pin on map
- };
+// Makes smooth scrolling for links to anchors on the same page
+ $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
+});
 
  $(document).ready(function(){
  	// When an artist is selected from the list, the artist's info
@@ -78,33 +84,37 @@ var artistSelected = function() {
 	    }
 	});
 
-	// When a location is selected
- 	// TODO: When input is selected from maps suggestions
- 	// This triggers the UI changes if the enter button is pressed on the
- 	// location input box
- 	/*$('#locationInput').keyup(function(event){
-	    if(event.keyCode === 13){
-	        locationSelected();
-	    }
-	});*/
+// Positioning the arist skip button
+var artistSelectionBottom = $(document).height() - $('nav').outerHeight() - $('#artistSelectionSection').outerHeight()
+			- $('#artistSelectionSection .next').outerHeight() - 50;
+	$('#artistSelectionSection .next').affix({
+		// The extra 50 at the end corresponds to the top margin of the locationSelection div
+	offset: {
+		bottom: artistSelectionBottom
+	}
 
- 	// Positioning the arist skip button
- 	$('#artistSelectionSection .next').affix({
- 		// The extra 50 at the end corresponds to the top margin of the locationSelection div
-		offset: {
-			bottom: $(document).height() - $('nav').outerHeight() - $('#artistSelectionSection').outerHeight()
-				- $('#artistSelectionSection .next').outerHeight() - 50
-		}
-
-	});
+});
 
 	// Positioning the location skip button
- 	$('#locationSelection .next').affix({
-		offset: {
-			top: $('nav').outerHeight() + $('#artistSelectionSection').outerHeight() + $('#locationSearch').outerHeight(),
-			bottom: $(document).height() - $('nav').outerHeight() - $('#artistSelectionSection').outerHeight()
-				- $('#locationSelection').outerHeight() - $('#locationSelection .next').outerHeight()
+	var locationSelectionBottom = $('#dateSelectionSection').outerHeight() + 100;
+  var locationSelectionTop = $('nav').outerHeight() + $('#artistSelectionSection').outerHeight();
+	$('#locationSelection .next').affix({
+	offset: {
+		top: locationSelectionTop,
+		bottom: locationSelectionBottom
+	}
+});
+
+ 	// Positioning the final "Go to Results" button in the date selection section
+ 	$('#goToResults').affix({
+ 		offset: {
+			top: $('nav').outerHeight() + $('#artistSelectionSection').outerHeight() + $('#locationSelection').outerHeight() + 200
 		}
+ 	});
+
+ 	// Stop links to anchors on the same page from refreshing the whole page
+	$('a.anchor-link').click(function() {
+		return false;
 	});
 
  });

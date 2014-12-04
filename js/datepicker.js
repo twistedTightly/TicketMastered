@@ -41,7 +41,15 @@ function padNumber(number) {
 $("#datepicker").datepicker({
     onSelect: function (dateText, inst) {
         addOrRemoveDate(dateText, inst);
-        var month = dateText.split('/')[0];
+
+        // If any dates have been selected, display the go to results button
+        if (dates.length) {
+            $('#goToResults').addClass('affix-top');
+            $('#goToResults').css('display', 'inline-block');
+        // Hide go to results button if no dates are selected
+        } else {
+            $('#goToResults').css('display', 'none');
+        }
     },
     beforeShowDay: function (date) {
         var year = date.getFullYear();

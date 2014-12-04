@@ -65,6 +65,11 @@ h1,h2,h3,h4,h5,h6 {
  	display: none;
 }
 
+.anchor-link {
+	width: 15%;
+	min-width: 180px;
+}
+
 .darken {
  	border-radius: 100%;
  	background: black;
@@ -227,20 +232,25 @@ h1,h2,h3,h4,h5,h6 {
 	box-shadow: 1px 1px 0.7em black;
 }
 
+#locationSelection a {
+	z-index: 1000;
+}
+
 /* Skip location/continue button placement */
-#locationSelection button.next.affix-top {
+#locationSelection a.next.affix-top#skipToDate {
 	position: relative;
 }
 
-#locationSelection button.next.affix {
- 	position: fixed;
+#locationSelection a.next.affix#skipToDate {
+ 	position: fixed !important;
  	bottom: 0;
 	left: 50%;
-	margin-left: -72px; /* Half the width of the button itself */
+	margin-left: -96px; /* Half the width of the button itself */
 }
 
-#artistSelection button.next.affix-bottom {
+#artistSelection a.next.affix-bottom#skipToDate {
  	position: relative;
+ 	bottom: 45px;
 }
 
 /***************************************
@@ -283,6 +293,24 @@ h1,h2,h3,h4,h5,h6 {
 .ui-corner-all .glyphicon {
 	font-size: 200%;
 	margin-top: 8px;
+}
+
+#goToResults {
+	z-index: 1000;
+	display: none;
+}
+
+#goToResults.affix {
+ 	position: fixed;
+ 	bottom: 50%;
+	right: 0;
+}
+
+#goToResults.affix-top {
+ 	position: relative;
+	float: right;
+	margin-top: -10px;
+	margin-right: -14px;
 }
 
 #datepicker td>a {
