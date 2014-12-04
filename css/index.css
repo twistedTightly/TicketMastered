@@ -23,7 +23,7 @@ body {
 	background-repeat: repeat;
 	font-family: 'Lato';
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 	color: white;
 }
 
@@ -59,6 +59,13 @@ h1,h2,h3,h4,h5,h6 {
  	position: absolute;
  	right: 0;
  	display: none;
+}
+
+.darken {
+ 	border-radius: 100%;
+ 	background: black;
+ 	padding: 0;
+ 	display: inline-block;
 }
 
 /***************************************

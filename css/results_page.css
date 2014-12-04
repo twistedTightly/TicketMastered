@@ -44,7 +44,7 @@ table {
 	margin: auto;
 	margin-top: 200px;
 	margin-bottom: 40px;
-	width: 85%;
+	width: 90%;
 	table-layout: auto;
 	border-collapse: separate;
 	border-spacing: 0px 10px;
@@ -99,6 +99,7 @@ img#logo.img-circle {
  *
  */
 #related-artists {
+	margin-top: 80px;
 	width: 85%; /* Same as table of resutls */
 }
 
@@ -107,8 +108,37 @@ img#logo.img-circle {
 }
 
 #artist-suggestion {
-	width: 70%;
+	text-align: center;
 }
 
+#artist-suggestion img {
+	width: 70%;
+	margin-bottom: 20px;
+}
 
+#artist-suggestion .darken {
+ 	-webkit-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+            color: white;
+}
 
+#artist-suggestion .darken:hover {
+	 opacity: 0.4;
+}
+
+#artist-suggestion a {
+	color: white;
+ 	-webkit-transition: all 0.05s linear;
+       -moz-transition: all 0.05s linear;
+        -ms-transition: all 0.05s linear;
+         -o-transition: all 0.05s linear;
+            transition: all 0.05s linear;
+}
+
+#artist-suggestion a:hover {
+	color: #1A1A1A;
+	text-decoration: none;
+}
