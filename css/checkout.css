@@ -11,11 +11,18 @@
 #summary {
 	color: black;
 	background-color: white;
+	box-shadow: 12px 12px 10px #1a1a1a;
 }
 tr#total {
-	color: white;
-	background-color: #ff9a0c;
+	color: #1a1a1a;
+	background-color: #FDBA51;
 	font-weight: bold;
+}
+#ticket {
+	box-shadow: 15px 15px 10px #1a1a1a;
+}
+#cancel {
+	padding-top: 20px;
 }
 #cards {
 	padding-top: 28px;
