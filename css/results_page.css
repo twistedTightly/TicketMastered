@@ -13,7 +13,7 @@
     width: 85%;
     padding-bottom: 30px;
     font-size: 250%;
-    color: black;
+    color: #1a1a1a;
 }
 
 #query input {
@@ -30,6 +30,10 @@
 	margin: 0 3px;
 }
 
+#results-header .btn {
+	color: #1a1a1a;
+}
+
 /*
  * Query Results
  *
@@ -43,11 +47,11 @@ table {
 	width: 85%;
 	table-layout: auto;
 	border-collapse: separate;
-	border-spacing: 0px 2px;
+	border-spacing: 0px 10px;
 }
 
 th, td{
-	padding: 20px;
+	padding: 15px;
 }
 
 td {
@@ -58,10 +62,16 @@ tr>td:first-child {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
+	width: 15%;
+	padding: 5px;
 }
 tr>td:last-child {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+td h3 {
+	font-family: 'Lato';
 }
 
 p {
@@ -71,11 +81,34 @@ h3 {
 	margin-top: 0;
 }
 
+img#logo.img-circle {
+	width: 45%;
+}
+
 /*
  * Escape Search
  *
  */
 #escapeSearch>label {
 	padding: 0 15px;
-	font-style: italic;
+	color: #1a1a1a;
 }
+
+/*
+ * Related Artists Section
+ *
+ */
+#related-artists {
+	width: 85%; /* Same as table of resutls */
+}
+
+#related-artists h3 {
+	margin-bottom: 30px;
+}
+
+#artist-suggestion {
+	width: 70%;
+}
+
+
+

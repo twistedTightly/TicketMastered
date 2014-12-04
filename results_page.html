@@ -32,7 +32,7 @@
 
     <!-- Query Description Header -->
     <div class="container-fluid" id="results-header">
-      <div id="query" class="row">
+      <div id="query" class="row center-block">
         <div class="col-xs-4 noLeftPadding">
           <input value="Maroon 5">
         </div>
@@ -50,11 +50,21 @@
         </div>
       </div>
 
-      <!-- Results Display Type Options -->
-      <div class="row" id="searchDisplayOptions">
-        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-list"></span> List</a>
-        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-calendar"></span> Calendar</a>
-        <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-map-marker"></span> Map</a>
+      <div class="row">
+        <!-- Results Display Type Options -->
+        <div class="col-sm-4" id="searchDisplayOptions">
+          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-list"></span> List</a>
+          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-calendar"></span> Calendar</a>
+          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-map-marker"></span> Map</a>
+        </div>
+
+        <div class="col-sm-4"></div>
+
+        <!-- "Escape Hatch" -->
+        <div class="col-sm-4" id="escapeSearch" align="center">
+          <label for="startOver"> Didn't find what you want?</label>
+          <a id="startOver" href="index.html" class="btn btn-primary btn-default">Start Over</a>
+        </div>
       </div>
     </div>
 
@@ -112,10 +122,24 @@
       </tr>
     </table>
 
-    <div id="escapeSearch" align="center">
-      <label for="startOver"> Didn't find what you want?</label>
-      <a id="startOver" href="index.html" class="btn btn-primary btn-default">Start Over</a>
-    </div>
+    <!-- Related Artists -->
+    <div class="container-fluid" id="related-artists">
+      <h3 class="row">Related artists</h3>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="images/results_page/brunomars.jpg" alt="logo" class="img-circle center-block" align="center" id="artist-suggestion">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/results_page/train.jpg" alt="logo" class="img-circle center-block" align="center" id="artist-suggestion">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/results_page/robthomas.jpg" alt="logo" class="img-circle center-block" align="center" id="artist-suggestion">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/results_page/onerepublic.jpg" alt="logo" class="img-circle center-block" align="center" id="artist-suggestion">
+        </div>
+      </div>
+    </div><!-- End related artists -->
 
   </body>
 </html>
