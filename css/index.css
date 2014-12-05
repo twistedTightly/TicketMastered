@@ -234,6 +234,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #locationSelection a {
 	z-index: 1000;
+	box-shadow: 1px 1px 0.7em black;
 }
 
 /* Skip location/continue button placement */
@@ -248,7 +249,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin-left: -96px; /* Half the width of the button itself */
 }
 
-#artistSelection a.next.affix-bottom#skipToDate {
+#locationSelection a.next.affix-bottom#skipToDate {
  	position: relative;
  	bottom: 45px;
 }

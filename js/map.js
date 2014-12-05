@@ -1,6 +1,9 @@
 /*
  * This creates the map in a div with the id "map-canvas"
  */
+var map;
+var currentMarker = '';
+
 function initialize() {
   var mapOptions = {
     center: { lat: 38.414478, lng: -96.881089},
@@ -10,12 +13,11 @@ function initialize() {
     mapTypeControl: false,
     scrollwheel: false
   };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-// TODO: Add correct options
 // Data that the dropdown will draw on for suggestions
 var locations = ['New York', 'New York, NY', 'New Jersey', 'New Mexico',
 'New Carlisle, IN', 'New Orleans, LA', 'New Buffalo, MI', 'New York University',
@@ -39,7 +41,20 @@ var locationSelected = function() {
   $('#locationSelection #skipToResults').css('display', 'block');
   $('#locationSelection .next').html('Continue ' + '<div class="glyphicon glyphicon-chevron-down" aria-hidden="true"></div>');
 
-  // TODO: Drop pin on map
+  // If there is already a marker on the map, remove it
+  if (currentMarker !== '') {
+    currentMarker.setMap(null);
+  }
+
+  var location = new google.maps.LatLng(40.734769, -73.989293);
+
+  // Create the new marker and add it to the map
+  currentMarker = new google.maps.Marker({
+      animation: google.maps.Animation.DROP,
+      position: location
+  });
+  currentMarker.setMap(map);
+  map.panTo(location);
 };
 
 $(document).ready(function(){
