@@ -34,19 +34,19 @@
     <div class="container-fluid" id="results-header">
       <div id="query" class="row center-block">
         <div class="col-xs-3 noLeftPadding">
-          <h1><input value="Maroon 5"></h1>
+          <h1><input id="artistNameParameter" value="Maroon 5"></h1>
         </div>
         <div class="queryFiller col-xs-1">
           <h1>in</h1>
         </div>
         <div class="col-xs-3">
-          <h1><input value="New York"></h1>
+          <h1><input id="locationParameter" value="New York"></h1>
         </div>
         <div class="queryFiller col-xs-2">
           <h1>during</h1>
         </div>
         <div class="col-xs-3">
-          <h1><input value="December"></h1>
+          <h1><input id="datesParameter" value="December"></h1>
         </div>
       </div>
 
@@ -87,8 +87,8 @@
             </a>
           </td>
           <td><h3>Maroon 5</h3></td> 
-          <td><p>Madison Square Garden</p></td>
-          <td><p>7:30 pm</p><p>Mar 5-6, 2015</p></td>
+          <td><p>The Bowery Ballroom</p></td>
+          <td><p>10:30 pm</p><p>Dec 11, 2014</p></td>
       </tr>
       <tr>
           <td>
@@ -97,29 +97,9 @@
             </a>
           </td>
           <td><h3>Maroon 5</h3></td> 
-          <td><p>Madison Square Garden</p></td>
-          <td><p>7:30 pm</p><p>Mar 5-6, 2015</p></td>
+          <td><p>Rockwood Music Hall</p></td>
+          <td><p>7:30 pm</p><p>Dec 10, 2014</p></td>
         </tr>
-      <tr>
-          <td>
-            <a href="concert_page.html">
-              <img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%">
-            </a>
-          </td>
-          <td><h3>Maroon 5</h3></td>
-          <td><p>Madison Square Garden</p></td>
-          <td><p>7:30 pm</p><p>Mar 5-6, 2015</p></td>
-        </tr>
-      <tr>
-        <td>
-            <a href="concert_page.html">
-              <img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%">
-            </a>
-          </td>
-          <td><h3>Maroon 5</h3></td> 
-          <td><p>Madison Square Garden</p></td>
-          <td><p>7:30 pm</p><p>Mar 5-6, 2015</p></td>
-      </tr>
     </table>
 
     <!-- Related Artists -->
@@ -127,37 +107,37 @@
       <h3 class="row">Related artists</h3>
       <div class="row">
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=Bruno_Mars">
             <img src="images/results_page/brunomars.jpg" alt="logo" class="darken img-circle center-block" align="center">
             <p>Bruno Mars</p>
           </a>
         </div>
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=Train">
             <img src="images/results_page/train.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Train</p>
           </a>
         </div>
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=Rob_Thomas">
             <img src="images/results_page/robthomas.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Rob Thomas</p>
           </a>
         </div>
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=OneRepublic">
             <img src="images/results_page/onerepublic.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>OneRepublic</p>
           </a>
         </div>
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=Justin_Timberlake">
             <img src="images/results_page/justin.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Justin Timberlake</p>
           </a>
         </div>
         <div id="artist-suggestion" class="col-sm-2">
-          <a href="">
+          <a href="results_page.html?artist=Matchbox_Twenty">
             <img src="images/results_page/matchboxtwenty.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Matchbox Twenty</p>
           </a>
@@ -165,7 +145,8 @@
       </div>
     </div><!-- End related artists -->
 
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/resultsPage.js"></script>
   </body>
 </html>

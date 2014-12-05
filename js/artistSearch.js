@@ -117,4 +117,21 @@ var artistSelectionBottom = $(document).height() - $('nav').outerHeight() - $('#
 		return false;
 	});
 
- });
+  // Parse inputs before going to the results page from any form
+  $( "form#sendResults" ).submit(function( event ) {
+    var resultsPageURL = 'results_page.html?';
+    if ($('#artistNameInput').val().length) {
+      var artistName = $('#artistNameInput').val().replace(' ', '_');
+      resultsPageURL += 'artist=' + artistName + '&';
+    }
+    if ($('#locationInput').val().length) {
+      var locationName = $('#locationInput').val().replace(' ', '_');
+      resultsPageURL += 'location=' + locationName + '&';
+    }
+    // NOTE: Major backend faking -> 'December' ALWAYS sent as date
+    resultsPageURL += 'dates=December';
+    window.location = resultsPageURL;
+    return false;
+  });
+
+});
