@@ -51,6 +51,12 @@ h1,h2,h3,h4,h5,h6 {
 	border-color: #fc9c05;
 }
 
+.btn-primary:visited {
+	color: #1a1a1a;
+	background-color: #FDBA51;
+	border-color: #fdb038;
+}
+
 .sectionHeader {
 	font-size: 300%;
 }
