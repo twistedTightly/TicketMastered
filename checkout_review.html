@@ -38,18 +38,18 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <h3>Review and Buy Tickets</h3>
           <form method="link" action="success.html">
             <div class="row">
               <div class="col-md-6">
-                <h4>Shipping Address:</h4>
+                <h4>Shipping Address: <a href="checkout_shipping.html" id="edit-link">Edit</a></h4>
                 <p>David Nichols</p>
                 <p>141 WORTH STREET</p>
                 <p>NEW YORK, NY 10013</p>
               </div>
               <div class="col-md-6">
-                <h4>Billing Address:</h4>
+                <h4>Billing Address: <a href="checkout_payment.html" id="edit-link">Edit</a></h4>
                 <p>David Nichols</p>
                 <p>141 WORTH STREET</p>
                 <p>NEW YORK, NY 10013</p>
@@ -61,58 +61,59 @@
                 <p>Standard: $3.95</p>
               </div>
               <div class="col-md-6">
-                <h4>Payment Method:</h4>
+                <h4>Payment Method: <a href="checkout_payment.html" id="edit-link">Edit</a></h4>
                 <p>MasterCard XXXXXXXXXXXX9412</p>
                 <p>Expires 04/15</p>
               </div>
             </div>
+            <br><br><br>
             <div class="row">
-              <div class="col-md-12">
-                <table class="table table-bordered">
-                  <tr>
-                    <th>EVENT</th>
-                    <th>SECTION</th>
-                    <th>ROW</th>
-                    <th>SEAT</th>  
-                  </tr>
-                  <tr>
-                    <td><div class="col-md-3"><img src="images/m5logo.jpg" alt="logo" class="img-circle" id="logo" height="75" width="75"></div><div class="col-md-9"><h5>Maroon 5</h5>Madison Square Garden<br>New York, NY<br>Thursday, March 5, 2015<br>7:30PM</div></td>
-                    <td>G</td>
-                    <td>25</td>
-                    <td>7</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-9">
-              </div>
-              <div class="col-md-3">
-                <button class="btn btn-primary btn-block" type="submit">Buy Now</button>
+              <div class="col-md-6"></div>
+              <div class="col-md-4">
+                <button class="btn btn-primary btn-block" type="submit">Buy now</button>
               </div>
             </div>
           </form>
         </div>
-        <div class="col-md-4">
-          <h3>Order Summary</h3>
-          <table class="table table-hover" id="summary">
-            <tr>
-              <td>Price</td>
-              <td>$100.97 x 1</td>
-            </tr>
-            <tr>
-              <td>Shipping</td>
-              <td>$3.95</td>
-            </tr>
-            <tr>
-              <td>Tax</td>
-              <td>$0.98</td>
-            </tr>
-            <tr id="total">
-              <td>Order Total:</td>
-              <td>$105.90</td>
-            </tr>
-          </table>
+
+       <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h3>Order Summary</h3>
+              <table class="table table-hover" id="summary">
+                <tr>
+                  <td>Price</td>
+                  <td>$100.97 x 1</td>
+                </tr>
+                <tr>
+                  <td>Shipping</td>
+                  <td>$3.95</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td>$0.98</td>
+                </tr>
+                <tr id="total">
+                  <td>Order Total:</td>
+                  <td>$105.90</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <img src="images/ticket.png" id="ticket">
+            </div>
+          </div>
+          <div class="row" id="cancel">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <a href="results_page.html"><span class="glyphicon glyphicon-remove-circle"></span>  I don't want these tickets anymore</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
