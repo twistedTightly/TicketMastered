@@ -35,13 +35,17 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: rgb(238,238,238);
 }
 
-.btn {
+.btn-primary {
 	color: #1a1a1a;
 	background-color: #FDBA51;
 	border-color: #fdb038;
 }
 
-.btn:hover {
+.btn-primary:focus {
+	outline: 0 !important;
+}
+
+.btn-primary:hover {
 	color: #1a1a1a;
 	background-color: #fca61f;
 	border-color: #fc9c05;
@@ -75,6 +79,10 @@ h1,h2,h3,h4,h5,h6 {
  	background: black;
  	padding: 0;
  	display: inline-block;
+}
+
+.center {
+	text-align: center;
 }
 
 /***************************************

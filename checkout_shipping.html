@@ -37,31 +37,39 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-2">
+          <a href="checkout.html"><span class="glyphicon glyphicon-arrow-left"></span>   Back to sign in</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
           <h3>Enter Shipping Address</h3>
           <form method="link" action="checkout_payment.html">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="firstname">First Name:</label>
                   <input type="text" class="form-control" id="firstname" autofocus>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="lastname">Last Name:</label>
                   <input type="text" class="form-control" id="lastname">
                 </div>
               </div>
+              <div class="col-md-2"></div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-10">
                 <div class="form-group">
                   <label for="address1">Address 1:</label>
                   <input type="text" class="form-control" id="address1">
                 </div>
               </div>
-              <div class="col-md-6">            
+            </div>
+            <div class="row">
+              <div class="col-md-10">            
                 <div class="form-group">
                   <label for="address2">Address 2:</label>
                   <input type="text" class="form-control" id="address2">
@@ -69,13 +77,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City:</label>
                   <input type="text" class="form-control" id="city">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <div class="form-group">
                   <label for="state">State:</label>
                   <select class="form-control" id="state">
@@ -93,7 +101,7 @@
                     <option value="HI">Hawaii</option>
                     <option value="ID">Idaho</option>
                     <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
+                    <option value="IN" selected>Indiana</option>
                     <option value="IA">Iowa</option>
                     <option value="KS">Kansas</option>
                     <option value="KY">Kentucky</option>
@@ -143,34 +151,52 @@
               </div>                
             </div>          
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-6">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <button class="btn btn-primary btn-block" type="submit">Continue</button>
               </div>
             </div> 
           </form>
         </div>
-        <div class="col-md-4">
-          <h3>Order Summary</h3>
-          <table class="table table-hover" id="summary">
-            <tr>
-              <td>Price</td>
-              <td>$100.97 x 1</td>
-            </tr>
-            <tr>
-              <td>Shipping</td>
-              <td>$3.95</td>
-            </tr>
-            <tr>
-              <td>Tax</td>
-              <td>$0.98</td>
-            </tr>
-            <tr id="total">
-              <td>Order Total:</td>
-              <td>$105.90</td>
-            </tr>
-          </table>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h3>Order Summary</h3>
+              <table class="table table-hover" id="summary">
+                <tr>
+                  <td>Price</td>
+                  <td>$100.97 x 1</td>
+                </tr>
+                <tr>
+                  <td>Shipping</td>
+                  <td>$3.95</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td>$0.98</td>
+                </tr>
+                <tr id="total">
+                  <td>Order Total:</td>
+                  <td>$105.90</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <img src="images/ticket.png" id="ticket">
+            </div>
+          </div>
+          <div class="row" id="cancel">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <a href="results_page.html"><span class="glyphicon glyphicon-remove-circle"></span>  I don't want these tickets anymore</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

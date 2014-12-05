@@ -31,41 +31,23 @@
     <div class="container"> 
       <div class="row">
         <br><br>
+        <div class="col-md-3"></div>
+        <div class="col-md-6 center">
+          <h1><span class="glyphicon glyphicon-ok-circle"></span> Success!</h1>
+          <p>Your ticket will be shipped right to your doorstep. Enjoy the concert!</p>
+          <br><img src="images/ticket.png">
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-md-5"></div>
         <div class="col-md-2">
+          <form method="link" action="index.html"><button class="btn btn-primary btn-block" type="submit">Back to homepage</button></form>
         </div>
-        <div class="col-md-4">
-          <h3>New Users</h3>
-          <p>Don't have an account?</p><p>No worries, just continue to checkout and you can create one at the end of the process.</p>
-          <br>
-          <form method="link" action="checkout_shipping.html">
-            <button class="btn btn-primary btn-lg" type="submit">Continue as Guest</button>
-          </form>
-        </div>
-        <div class="col-md-4">
-          <h3>Existing Users</h3>
-          <p>Sign in to your TicketMaster account</p>
-          <form role="form">
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password">
-            </div>
-            <button class="btn btn-primary btn-lg" type="submit" onclick="notImplemented()">Sign In</button>
-          </form>
-        </div>
-        <div class="col-md-2">
-        </div>
+        <div class="col-md-5"></div>
       </div>
     </div>
-
-    <script>
-    function notImplemented() {
-      alert("This feature is not yet implemented.\nPlease continue checkout as a guest.");
-    }
-    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
