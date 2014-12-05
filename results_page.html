@@ -33,29 +33,29 @@
     <!-- Query Description Header -->
     <div class="container-fluid" id="results-header">
       <div id="query" class="row center-block">
-        <div class="col-xs-4 noLeftPadding">
+        <div class="col-xs-3 noLeftPadding">
           <h1><input value="Maroon 5"></h1>
         </div>
-        <div class="col-xs-1">
-          <h1><span>in</span></h1>
+        <div class="queryFiller col-xs-1">
+          <h1>in</h1>
         </div>
         <div class="col-xs-3">
           <h1><input value="New York"></h1>
         </div>
-        <div class="col-xs-1">
-          <h1><span>on</span></h1>
+        <div class="queryFiller col-xs-2">
+          <h1>during</h1>
         </div>
         <div class="col-xs-3">
-          <h1><input value=""></h1>
+          <h1><input value="December"></h1>
         </div>
       </div>
 
       <div class="row">
         <!-- Results Display Type Options -->
         <div class="col-sm-4" id="searchDisplayOptions">
-          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-list"></span> List</a>
-          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-calendar"></span> Calendar</a>
-          <a href="results_page.html" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-map-marker"></span> Map</a>
+          <a href="" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-list"></span> List</a>
+          <a href="javascript:notImplementedAlert();" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-calendar"></span> Calendar</a>
+          <a href="javascript:notImplementedAlert();" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-map-marker"></span> Map</a>
         </div>
 
         <div class="col-sm-4"></div>
@@ -126,32 +126,46 @@
     <div class="container-fluid" id="related-artists">
       <h3 class="row">Related artists</h3>
       <div class="row">
-        <div id="artist-suggestion" class="col-sm-3">
+        <div id="artist-suggestion" class="col-sm-2">
           <a href="">
             <img src="images/results_page/brunomars.jpg" alt="logo" class="darken img-circle center-block" align="center">
             <p>Bruno Mars</p>
           </a>
         </div>
-        <div id="artist-suggestion" class="col-sm-3">
+        <div id="artist-suggestion" class="col-sm-2">
           <a href="">
             <img src="images/results_page/train.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Train</p>
           </a>
         </div>
-        <div id="artist-suggestion" class="col-sm-3">
+        <div id="artist-suggestion" class="col-sm-2">
           <a href="">
             <img src="images/results_page/robthomas.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>Rob Thomas</p>
           </a>
         </div>
-        <div id="artist-suggestion" class="col-sm-3">
+        <div id="artist-suggestion" class="col-sm-2">
           <a href="">
             <img src="images/results_page/onerepublic.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
             <p>OneRepublic</p>
           </a>
         </div>
+        <div id="artist-suggestion" class="col-sm-2">
+          <a href="">
+            <img src="images/results_page/justin.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
+            <p>Justin Timberlake</p>
+          </a>
+        </div>
+        <div id="artist-suggestion" class="col-sm-2">
+          <a href="">
+            <img src="images/results_page/matchboxtwenty.jpg" alt="logo" class="darken img-circle center-block" align="center" id="artist-suggestion">
+            <p>Matchbox Twenty</p>
+          </a>
+        </div>
       </div>
     </div><!-- End related artists -->
 
+
+    <script src="js/resultsPage.js"></script>
   </body>
 </html>
