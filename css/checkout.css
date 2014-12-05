@@ -43,5 +43,10 @@ input[type='checkbox'] {
 #back-btn {
 	margin-top: -34px;
 }
+#edit-link {
+	padding-left: 14px;
+	font-family: 'Lato';
+	font-size: 14px;
+}
 
 
