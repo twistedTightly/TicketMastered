@@ -24,7 +24,7 @@ input[type='checkbox'] {
 	margin-right: 10px;
 }
 #ticket-table{
-	height: 390px;
+	height: 345px;
 	overflow: auto;
 }
 #tickets {
@@ -46,7 +46,7 @@ input[type='checkbox'] {
 	padding-top: 10px;
 }
 #separator {
-	padding-bottom: 175px;
+	padding-bottom: 170px;
 }
 #preconcert {
 	border: ridge;
@@ -54,7 +54,7 @@ input[type='checkbox'] {
 	border-radius: 50px;
 	padding-bottom: 30px;
 	background-color: #1a1a1a;
-	margin-bottom: -50px;
+	margin-bottom: -200px;
 }
 #preconcert > .col-md-3 > h3 {
 	text-align: center;
