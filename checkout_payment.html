@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TicketMaster</title>
-
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -17,6 +18,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -37,14 +39,14 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <h3>Enter Payment Information</h3>
           <form method="link" action="checkout_review.html">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="cardtype">Credit/Debit Card Type:</label>
-                  <select class="form-control" id="cardtype" autofocus>
+                  <select class="form-control" id="cardtype" autofocus required>
                     <option value="" disabled selected>Please Select</option>
                     <option value="AMEX">American Express</option>
                     <option value="VISA">VISA</option>
@@ -63,23 +65,25 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="cardnum">Card Number:</label>
-                  <input type="text" class="form-control" id="cardnum">
+                  <input type="text" class="form-control" id="cardnum" required>
                 </div>
               </div>
-              <div class="col-md-2">
+            </div>
+            <div class="row">
+              <div class="col-md-3">
                 <div class="form-group">
                   <label for="security">Security Code:</label>
-                  <input type="text" class="form-control" id="security">
+                  <input type="text" class="form-control" id="security" required>
                 </div>
               </div>  
               <div class="col-md-3">
                 <div class="form-group">
                   <label id="expires">Expires On:</label>
                   <div class="col-md-6" id="expmonth">
-                    <select class="form-control" id="expmonth">
+                    <select class="form-control" id="expmonth" required>
                       <option value="01">01</option>
                       <option value="02">02</option>
                       <option value="03">03</option>
@@ -95,7 +99,7 @@
                     </select>
                   </div>
                   <div class="col-md-6" id="expyear">
-                    <select class="form-control" id="expyear">
+                    <select class="form-control" id="expyear" required>
                       <option value="14">14</option>
                       <option value="15">15</option>
                       <option value="16">16</option>
@@ -105,45 +109,51 @@
                     </select>
                   </div>
                 </div>
-              </div>             
-            </div>
+              </div>  
+            </div>           
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="nameoncard">Name on Card:</label>
-                  <input type="text" class="form-control" id="nameoncard">
+                  <input type="text" class="form-control" id="nameoncard" required>
                 </div>
               </div>
             </div>
-            
+
             <h3>Billing Address</h3>
-            <div class="form-group">
-              <div class="checkbox">
-                <label><input type="checkbox" value="same" checked>Same as Shipping</label>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="checkbox" id="same" checked>Same as shipping
+                </div>
               </div>
             </div>
+            <div id="billing">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="firstname">First Name:</label>
                   <input type="text" class="form-control" id="firstname">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="lastname">Last Name:</label>
                   <input type="text" class="form-control" id="lastname">
                 </div>
               </div>
+              <div class="col-md-2"></div>
             </div>
             <div class="row">
-              <div class="col-md-6">              
+              <div class="col-md-10">
                 <div class="form-group">
                   <label for="address1">Address 1:</label>
                   <input type="text" class="form-control" id="address1">
                 </div>
               </div>
-              <div class="col-md-6">
+            </div>
+            <div class="row">
+              <div class="col-md-10">            
                 <div class="form-group">
                   <label for="address2">Address 2:</label>
                   <input type="text" class="form-control" id="address2">
@@ -151,13 +161,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City:</label>
                   <input type="text" class="form-control" id="city">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <div class="form-group">
                   <label for="state">State:</label>
                   <select class="form-control" id="state">
@@ -175,7 +185,7 @@
                     <option value="HI">Hawaii</option>
                     <option value="ID">Idaho</option>
                     <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
+                    <option value="IN" selected>Indiana</option>
                     <option value="IA">Iowa</option>
                     <option value="KS">Kansas</option>
                     <option value="KY">Kentucky</option>
@@ -223,39 +233,75 @@
                   <input type="text" class="form-control" id="zip">
                 </div>
               </div>                
+            </div>          
             </div>
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-6">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <button class="btn btn-primary btn-block" type="submit">Continue</button>
               </div>
-            </div>          
+            </div> 
           </form>
+          <div class="row">
+            <div class="col-md-3" id="back-btn">
+              <form method="link" action="checkout_shipping.html"><button class="btn btn-default btn-block" type="submit">Back</button></form>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h3>Order Summary</h3>
-          <table class="table table-hover" id="summary">
-            <tr>
-              <td>Price</td>
-              <td>$100.97 x 1</td>
-            </tr>
-            <tr>
-              <td>Shipping</td>
-              <td>$3.95</td>
-            </tr>
-            <tr>
-              <td>Tax</td>
-              <td>$0.98</td>
-            </tr>
-            <tr id="total">
-              <td>Order Total:</td>
-              <td>$105.90</td>
-            </tr>
-          </table>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h3>Order Summary</h3>
+              <table class="table table-hover" id="summary">
+                <tr>
+                  <td>Price</td>
+                  <td>$100.97 x 1</td>
+                </tr>
+                <tr>
+                  <td>Shipping</td>
+                  <td>$3.95</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td>$0.98</td>
+                </tr>
+                <tr id="total">
+                  <td>Order Total:</td>
+                  <td>$105.90</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <img src="images/ticket.png" id="ticket">
+            </div>
+          </div>
+          <div class="row" id="cancel">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+              <a href="results_page.html"><span class="glyphicon glyphicon-remove-circle"></span>  I don't want these tickets anymore</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function(){
+          $('#same').change(function(){
+              if(this.checked)
+                  $('#billing').fadeOut('slow');
+              else
+                  $('#billing').fadeIn('slow');
+
+          });
+      });
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

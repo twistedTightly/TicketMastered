@@ -11,7 +11,7 @@
 #summary {
 	color: black;
 	background-color: white;
-	box-shadow: 12px 12px 10px #1a1a1a;
+	box-shadow: 12px 12px 15px #1a1a1a;
 }
 tr#total {
 	color: #1a1a1a;
@@ -19,7 +19,7 @@ tr#total {
 	font-weight: bold;
 }
 #ticket {
-	box-shadow: 15px 15px 10px #1a1a1a;
+	box-shadow: 10px 10px 15px #1a1a1a;
 }
 #cancel {
 	padding-top: 20px;
@@ -32,6 +32,16 @@ tr#total {
 }
 #expmonth, #expyear {
 	padding-left: 0px;
+}
+input[type='checkbox'] {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#billing {
+	display: none;
+}
+#back-btn {
+	margin-top: -34px;
 }
 
 
