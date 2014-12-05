@@ -20,6 +20,15 @@
     <![endif]-->
   </head>
   <body>
+    <script> <!-- script to retrieve values from query string -->
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    </script>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -44,15 +53,39 @@
             <div class="row">
               <div class="col-md-6">
                 <h4>Shipping Address: <a href="checkout_shipping.html" id="edit-link">Edit</a></h4>
-                <p>David Nichols</p>
-                <p>141 WORTH STREET</p>
-                <p>NEW YORK, NY 10013</p>
+                <script>
+                  var first = getParameterByName('firstname');
+                  var last = getParameterByName('lastname');
+                  document.write('<p>'+first+' '+last+'</p>');
+                  var add1 = getParameterByName('address1').toUpperCase();
+                  var add2 = getParameterByName('address2').toUpperCase();
+                  document.write('<p>'+add1+'</p>');
+                  if (add2) {
+                    document.write('<p>'+add2+'</p>');
+                  }
+                  var c = getParameterByName('city').toUpperCase();
+                  var s = getParameterByName('state');
+                  var z = getParameterByName('zip');
+                  document.write('<p>'+c+', '+s+' '+z+'</p>');
+                </script>
               </div>
               <div class="col-md-6">
                 <h4>Billing Address: <a href="checkout_payment.html" id="edit-link">Edit</a></h4>
-                <p>David Nichols</p>
-                <p>141 WORTH STREET</p>
-                <p>NEW YORK, NY 10013</p>
+                <script>
+                  var first = getParameterByName('firstname');
+                  var last = getParameterByName('lastname');
+                  document.write('<p>'+first+' '+last+'</p>');
+                  var add1 = getParameterByName('address1').toUpperCase();
+                  var add2 = getParameterByName('address2').toUpperCase();
+                  document.write('<p>'+add1+'</p>');
+                  if (add2) {
+                    document.write('<p>'+add2+'</p>');
+                  }
+                  var c = getParameterByName('city').toUpperCase();
+                  var s = getParameterByName('state');
+                  var z = getParameterByName('zip');
+                  document.write('<p>'+c+', '+s+' '+z+'</p>');
+                </script>
               </div>
             </div>
             <div class="row">
@@ -62,8 +95,14 @@
               </div>
               <div class="col-md-6">
                 <h4>Payment Method: <a href="checkout_payment.html" id="edit-link">Edit</a></h4>
-                <p>MasterCard XXXXXXXXXXXX9412</p>
-                <p>Expires 04/15</p>
+                <script>
+                  var type = getParameterByName('cardtype');
+                  var num = getParameterByName('cardnum').substr(getParameterByName('cardnum').length - 4);
+                  document.write('<p>'+type+' XXXXXXXXXXXX'+num+'</p>');
+                  var emonth = getParameterByName('expmonth');
+                  var eyear = getParameterByName('expyear');
+                  document.write('<p>Expires '+emonth+'/'+eyear+'</p>');
+                </script>
               </div>
             </div>
             <br><br><br>

@@ -21,6 +21,15 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   </head>
   <body>
+    <script> <!-- script to retrieve values from query string -->
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    </script>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -41,18 +50,18 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Enter Payment Information</h3>
-          <form method="link" action="checkout_review.html">
+          <form method="GET" action="checkout_review.html">
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="cardtype">Credit/Debit Card Type:</label>
-                  <select class="form-control" id="cardtype" autofocus required>
+                  <select class="form-control" id="cardtype" name="cardtype" autofocus required>
                     <option value="" disabled selected>Please Select</option>
-                    <option value="AMEX">American Express</option>
+                    <option value="American Express">American Express</option>
                     <option value="VISA">VISA</option>
-                    <option value="MC">MasterCard</option>
-                    <option value="DIS">Discover Network</option>
-                    <option value="DC">Diners Club</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Discover">Discover Network</option>
+                    <option value="Diners Club">Diners Club</option>
                   </select>
                 </div>
               </div>
@@ -68,7 +77,7 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="cardnum">Card Number:</label>
-                  <input type="text" class="form-control" id="cardnum" required>
+                  <input type="text" class="form-control" id="cardnum" name="cardnum" required>
                 </div>
               </div>
             </div>
@@ -83,7 +92,7 @@
                 <div class="form-group">
                   <label id="expires">Expires On:</label>
                   <div class="col-md-6" id="expmonth">
-                    <select class="form-control" id="expmonth" required>
+                    <select class="form-control" id="expmonth" name="expmonth" required>
                       <option value="01">01</option>
                       <option value="02">02</option>
                       <option value="03">03</option>
@@ -99,7 +108,7 @@
                     </select>
                   </div>
                   <div class="col-md-6" id="expyear">
-                    <select class="form-control" id="expyear" required>
+                    <select class="form-control" id="expyear" name="expyear" required>
                       <option value="14">14</option>
                       <option value="15">15</option>
                       <option value="16">16</option>
@@ -133,13 +142,19 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="firstname">First Name:</label>
-                  <input type="text" class="form-control" id="firstname">
+                  <script>
+                    var first = getParameterByName('firstname');
+                    document.write('<input type="text" class="form-control" id="firstname" name="firstname" value="'+first+'">');
+                  </script>
                 </div>
               </div>
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="lastname">Last Name:</label>
-                  <input type="text" class="form-control" id="lastname">
+                  <script>
+                    var last = getParameterByName('lastname');
+                    document.write('<input type="text" class="form-control" id="lastname" name="lastname" value="'+last+'">');
+                  </script>
                 </div>
               </div>
               <div class="col-md-2"></div>
@@ -148,7 +163,10 @@
               <div class="col-md-10">
                 <div class="form-group">
                   <label for="address1">Address 1:</label>
-                  <input type="text" class="form-control" id="address1">
+                  <script>
+                    var add1 = getParameterByName('address1');
+                    document.write('<input type="text" class="form-control" id="address1" name="address1" value="'+add1+'">');
+                  </script>
                 </div>
               </div>
             </div>
@@ -156,7 +174,10 @@
               <div class="col-md-10">            
                 <div class="form-group">
                   <label for="address2">Address 2:</label>
-                  <input type="text" class="form-control" id="address2">
+                  <script>
+                    var add2 = getParameterByName('address2');
+                    document.write('<input type="text" class="form-control" id="address2" name="address2" value="'+add2+'">');
+                  </script>
                 </div>
               </div>
             </div>
@@ -164,13 +185,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City:</label>
-                  <input type="text" class="form-control" id="city">
+                  <script>
+                    var c = getParameterByName('city');
+                    document.write('<input type="text" class="form-control" id="city" name="city" value="'+c+'">');
+                  </script>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="form-group">
                   <label for="state">State:</label>
-                  <select class="form-control" id="state">
+                  <script>
+                    var s = getParameterByName('state');
+                    document.write('<select class="form-control" id="state" name="state" value="'+s+'">');
+                  </script>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -230,11 +257,15 @@
               <div class="col-md-3">
                 <div class="form-group">
                   <label for="zip">ZIP Code:</label>
-                  <input type="text" class="form-control" id="zip">
+                  <script>
+                    var z = getParameterByName('zip');
+                    document.write('<input type="text" class="form-control" id="zip" name="zip" value="'+z+'">');
+                  </script>
                 </div>
               </div>                
             </div>          
             </div>
+            <br><br>
             <div class="row">
               <div class="col-md-6"></div>
               <div class="col-md-4">
@@ -293,11 +324,11 @@
     <script>
       $(document).ready(function(){
           $('#same').change(function(){
+              alert("This functionality is not yet implemented.\nWe assume that your billing address is the same as your shipping.");
               if(this.checked)
                   $('#billing').fadeOut('slow');
               else
                   $('#billing').fadeIn('slow');
-
           });
       });
     </script>
