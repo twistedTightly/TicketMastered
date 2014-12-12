@@ -101,6 +101,10 @@ img#logo.img-circle {
 	width: 45%;
 }
 
+.clickableRow {
+	cursor: pointer;
+}
+
 /*
  * Escape Search
  *

@@ -3,11 +3,11 @@
  * Javascript for random bits of the results page
  */
 
- var maroon5ChicagoTable = '<tr><td><a href="concert_page.html"><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Maroon 5</h3></td> <td><p>Lincoln Hall</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr><td><a href="concert_page.html"><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td> <td><p>House of Blues</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr><td><a href="concert_page.html"><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Maroon 5</h3></td> <td><p>Park West</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
+ var maroon5ChicagoTable = '<tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Maroon 5</h3></td><td><p>Lincoln Hall</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td> <td><p>House of Blues</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Maroon 5</h3></td> <td><p>Park West</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
 
- var maroon5NYTable = '<tr><td><a href="concert_page.html"><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td><td><p>Madison Square Garden</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr><td><a href="concert_page.html"><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Maroon 5</h3></td><td><p>The Bowery Ballroom</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr><td><a href="concert_page.html"><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Maroon 5</h3></td> <td><p>Rockwood Music Hall</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
+ var maroon5NYTable = '<tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td><td><p>Madison Square Garden</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Maroon 5</h3></td><td><p>The Bowery Ballroom</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/m5logo.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Maroon 5</h3></td><td><p>Rockwood Music Hall</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
 
-var justinTimberlakeNYTable = '<tr><td><a href="concert_page.html"><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td> <td><p>Madison Square Garden</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr><td><a href="concert_page.html"><img src="images/results_page/justin.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Justin Timberlake</h3></td> <td><p>The Bowery Ballroom</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr><td><a href="concert_page.html"><img src="images/results_page/justin.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></a></td><td><h3>Justin Timberlake</h3></td> <td><p>Rockwood Music Hall</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
+var justinTimberlakeNYTable = '<tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/jingleBall2014_2.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Z100\'s Jingle Ball 2014 - Presented by Goldfish Puffs</h3></td><td><p>Madison Square Garden</p></td><td><p>8:00 pm</p><p>Dec 12, 2014</p></td></div></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/justin.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Justin Timberlake</h3></td><td><p>The Bowery Ballroom</p></td><td><p>10:30 pm</p><p>Dec 11, 2014</p></td></tr><tr class="clickableRow" href="concert_page.html"><td><img src="images/results_page/justin.jpg" alt="logo" class="img-circle" align="center" id="logo" width="50%"></td><td><h3>Justin Timberlake</h3></td><td><p>Rockwood Music Hall</p></td><td><p>7:30 pm</p><p>Dec 10, 2014</p></td></tr>';
 
 var currentArtist = '';
 var currentDates = '';
@@ -31,6 +31,9 @@ function updateSearchResults() {
 	} else {
 		$('tbody').append(maroon5NYTable);
 	}
+	$(".clickableRow").click(function() {
+	    window.document.location = $(this).attr("href");
+	});
 }
 
 function observeInputValue(value, id) {
@@ -89,5 +92,9 @@ $(document).ready(function() {
     	observeInputValue($('#locationParameter').val(), 'locationParameter');
     	observeInputValue($('#datesParameter').val(), 'datesParameter');
     }, 1000);
+
+	$(".clickableRow").click(function() {
+	    window.document.location = $(this).attr("href");
+	});
 });
 
